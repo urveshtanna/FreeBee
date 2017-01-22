@@ -1,0 +1,39 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.urvesh.freebee.Home" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.urvesh.freebee.tools.CameraPreview
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.urvesh.freebee.tools.GraphicOverlay
+                android:id="@+id/faceOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.urvesh.freebee.tools.CameraPreview>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="16dp"
+            app:fabSize="mini"
+            android:id="@+id/fab_change_camera_view"
+            android:onClick="@{()->activity.changeCameraView()}"
+            android:src="@drawable/ic_camera_front_pink_500_24dp"
+            app:backgroundTint="#fff"/>
+
+    </FrameLayout>
+</layout>
